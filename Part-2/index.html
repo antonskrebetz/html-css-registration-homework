@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Part 2</title>
+</head>
+<body>
+  <section>
+    <div class="tabs">
+      <a class="tabs-item" href="#singin">Sign in</a>
+      <a class="tabs-item" href="#singup">Sign up</a>
+    </div>
+    <div class="tabs-content">
+      <form class="form" id="singup" action="https://reqres.in/api/register" method="POST">
+        <input class="form-input form-input_required" type="tel" name="mobilePhone" placeholder="Mobile phone" required>
+        <input class="form-input form-input_required" type="email" name="email" placeholder="Email ID" required>
+        <input class="form-input form-input_required" type="password" name="password" placeholder="Password" required>
+        <div class="group">
+          <input class="form-input_checkbox" type="checkbox" required checked>I agree to terms and conditions
+        </div>
+        <input class="form-input_submit" type="submit" value="Register">
+      </form>
+      <form class="form" id="singin" action="https://reqres.in/api/login" method="POST">
+        <input class="form-input form-input_required" type="email" name="email" placeholder="Email" required>
+        <input class="form-input form-input_required" type="password" name="password" placeholder="Password" required>
+        <div class="group">
+          <input class="form-input_checkbox" type="checkbox" required>Keep me logged in
+        </div>
+        <input class="form-input_submit" type="submit" value="Login">
+        <a class="form-button_forgot" href="#">Forgot password?</a>
+      </form>
+    </div>
+  </section>
+</body>
+</html>
