@@ -116,3 +116,36 @@ section {
 .form-button_forgot:hover {
   color: rgb(255, 123, 0);
 }
+
+@media (max-width: 500px) {
+  body {
+    padding: 0 10px;
+  }
+
+  .tabs-item {
+    width: 50%;
+  }
+
+  .form:nth-child(1)::before {
+    display: block;
+    left: 50%;
+    width: 25%;
+  }
+}
+
+@media (max-width: 400px) {
+
+  .form:nth-child(1)::before {
+    display: block;
+    left: 50%;
+    width: 34%;
+  }
+
+  .form:nth-child(2)::before {
+    width: 32%;
+  }
+
+  .group {
+    font-size: 12px;
+  }
+}
