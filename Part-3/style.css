@@ -1,0 +1,151 @@
+*,
+*::before,
+*::after {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("img/Layer.png") top/cover no-repeat;
+}
+
+section {
+  padding: 50px;
+  width: 450px;
+  height: 600px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.tabs {
+  display: flex;
+  margin-bottom: 70px;
+}
+
+.tabs-item {
+  width: 33%;
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.form {
+  display: none;
+  flex-direction: column;
+  position: relative;
+}
+
+.form:before {
+  content: "";
+  position: absolute;
+  display: none;
+  top: -60px;
+  width: 23%;
+  height: 3px;
+  background-color: rgb(255, 123, 0);
+}
+
+.form:nth-child(1)::before {
+  display: block;
+  left: 33%;
+  width: 25%;
+}
+
+.form:nth-child(2)::before {
+  display: block;
+}
+
+.form:target {
+  display: flex;
+}
+
+.form-input_required {
+  margin-bottom: 50px;
+  padding: 5px 10px;
+  font-family: inherit;
+  font-size: 18px;
+  color: #fff;
+  outline: none;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #ccc;
+}
+
+.form-input_required::placeholder {
+  color: #fff;
+}
+
+.form-input_checkbox {
+  margin-right: 10px;
+  margin-bottom: 60px;
+}
+
+.form-input_submit {
+  margin: 0 auto 20px;
+  padding: 10px 20px;
+  width: 200px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 30px;
+  border: none;
+  background-color: rgb(255, 123, 0);
+  cursor: pointer;
+  transition: background 0.1s ease-in;
+}
+
+.form-input_submit:hover {
+  background-color: sandybrown;
+}
+
+.form-button_forgot {
+  margin: 0 auto;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.1s ease-in;
+}
+
+.form-button_forgot:hover {
+  color: rgb(255, 123, 0);
+}
+
+@media (max-width: 500px) {
+  body {
+    padding: 0 10px;
+  }
+
+  .tabs-item {
+    width: 50%;
+  }
+
+  .form:nth-child(1)::before {
+    display: block;
+    left: 50%;
+    width: 25%;
+  }
+}
+
+@media (max-width: 400px) {
+
+  .form:nth-child(1)::before {
+    display: block;
+    left: 50%;
+    width: 34%;
+  }
+
+  .form:nth-child(2)::before {
+    width: 32%;
+  }
+
+  .group {
+    font-size: 12px;
+  }
+}
